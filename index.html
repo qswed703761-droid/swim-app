@@ -284,6 +284,7 @@ search();
 <div id="inst" hidden role="dialog" aria-label="安裝到手機"><img src="icon-192.png" alt=""><p id="instMsg"></p><button id="instGo" hidden>安裝</button><button id="instX" aria-label="關閉">✕</button></div>
 <script>
 (function(){
+ if(/ Line\//i.test(navigator.userAgent)&&!/openExternalBrowser/.test(location.search)){location.replace(location.pathname+'?openExternalBrowser=1');return}
  if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js').catch(function(){});
  var off=document.getElementById('off');function net(){off.hidden=navigator.onLine}net();addEventListener('online',net);addEventListener('offline',net);
  var standalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone;

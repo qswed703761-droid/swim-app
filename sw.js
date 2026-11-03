@@ -1,5 +1,5 @@
 // 離線快取。成績更新時把 VERSION 改一個數字,手機下次連網打開就會換成新版。
-var VERSION = 'v2026-11-03b';
+var VERSION = 'v2026-11-03c';
 var FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './icon-maskable-512.png', './apple-touch-icon.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(VERSION).then(function (c) { return c.addAll(FILES); }).then(function () { return self.skipWaiting(); }));
