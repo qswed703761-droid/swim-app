@@ -1,0 +1,17 @@
+{
+  "name": "中年級男子組成績查詢",
+  "short_name": "泳賽成績",
+  "description": "115年議長盃 + 中區(2) 成績查詢:年級組與歲級組雙分類、排行榜、隊伍、接力、明年預估",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef6f8",
+  "theme_color": "#0a7ea4",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
