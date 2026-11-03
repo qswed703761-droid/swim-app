@@ -75,7 +75,7 @@ td:first-child small{display:block;color:var(--muted);font-size:11px}
 tr:last-child td{border-bottom:0}
 tbody tr{cursor:pointer}
 td.top{color:var(--accent);font-weight:700}
-#inst{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:576px;margin:0 auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:14px;z-index:10}
+#inst{position:fixed;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));top:calc(10px + env(safe-area-inset-top,0px));max-width:576px;margin:0 auto;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:14px;z-index:10}
 #inst[hidden]{display:none}
 #inst img{width:40px;height:40px;border-radius:9px;flex:none}
 #inst p{margin:0;flex:1}
@@ -292,7 +292,7 @@ search();
  document.getElementById('instX').onclick=function(){box.hidden=true;try{localStorage.setItem('instX','1')}catch(e){}};
  if(standalone||seen())return;
  var ua=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
- if(ios){msg.innerHTML='加到主畫面當 APP 用:點下方 <b>分享</b> 按鈕 ⬆️,再選 <b>加入主畫面</b>';box.hidden=false}
+ if(ios){msg.innerHTML='要裝成 APP:請按 <b>Safari 最下面工具列</b>的「分享」(或先按「⋯」再按「分享」),往下滑選 <b>加入主畫面</b>。這個框只是說明,看完按 ✕ 關掉';box.hidden=false}
  addEventListener('beforeinstallprompt',function(e){e.preventDefault();dp=e;msg.textContent='把成績查詢安裝到手機,沒網路也能看';go.hidden=false;box.hidden=false});
  go.onclick=function(){if(!dp)return;dp.prompt();dp.userChoice.then(function(){box.hidden=true;dp=null})};
  addEventListener('appinstalled',function(){box.hidden=true});
